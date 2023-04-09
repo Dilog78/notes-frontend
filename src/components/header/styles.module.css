@@ -1,0 +1,102 @@
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    vertical-align: center;
+}
+
+.link {
+    padding-left: 20%;
+    color: white;
+    text-decoration: none;
+    font-family: 'Fruktur', cursive;
+    font-size: 2rem;
+}
+
+.switch {
+    position: relative;
+    margin-top: 1rem;
+    display: inline-block;
+    width: 50px;
+    height: 18px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    content: "";
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border: 1px solid gold;
+    transition: .4s;
+
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 4px;
+    bottom: 1px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #06061F;
+    border: 1px solid white;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.butLangUkr {
+    width: 30px;
+    height: 16px;
+    background-image: url("../../../static/Flag_of_Ukraine.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.butLangEng {
+    background-image: url("../../../static/flag-velikobritanii.png");
+    width: 30px;
+    height: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.buttonContainer {
+    display: flex;
+    padding-top: 1rem;
+    padding-right: 20%;
+    column-gap: 0.3rem;
+}
+
