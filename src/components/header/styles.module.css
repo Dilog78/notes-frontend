@@ -1,6 +1,5 @@
 .header {
     display: flex;
-    width: 100%;
     justify-content: space-between;
     vertical-align: center;
 }
@@ -81,6 +80,7 @@ input:checked + .slider:before {
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
+    border-radius: 10%;
 }
 
 .butLangEng {
@@ -91,6 +91,7 @@ input:checked + .slider:before {
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
+    border-radius: 10%;
 }
 
 .buttonContainer {
