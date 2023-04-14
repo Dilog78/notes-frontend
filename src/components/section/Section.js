@@ -1,6 +1,19 @@
 import styles from './styles.module.css'
+import {useState} from "react";
 
 const Section = () => {
+
+    const [login, setLogin] = useState({
+        email: '',
+        password: ''
+    });
+
+    console.log(login);
+
+    const handleLogin = (e) => {
+        setLogin({...login, [e.target.type]: e.target.value})
+    }
+
 
     return (
         <section className={styles.section}>
@@ -9,11 +22,11 @@ const Section = () => {
                 <p>Or log in using an email and password, after registering:</p>
                 <div>
                     <label>Email:</label>
-                    <input placeholder='your@email.com' type='email'/>
+                    <input onChange={handleLogin} placeholder='your@email.com' type='email'/>
                 </div>
                 <div>
                     <label>Password:</label>
-                    <input placeholder='password' type='password'/>
+                    <input onChange={handleLogin} placeholder='password' type='password'/>
                 </div>
                 <div className={styles.groupButton}>
                     <button type='submit'>Log in</button>
